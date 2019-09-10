@@ -4,12 +4,12 @@
 			基本信息
 		</div>
 		<div class="item-title-list">
-			<div class="item-name">姓名：张欢</div>
-			<div class="item-age">年龄：21</div>
-			<div class="item-phone">联系电话：18285613445</div>
-			<div class="item-school">毕业院校：襄阳职业技术学院</div>
-			<div class="item-email">邮箱：Zhang1208h@163.com</div>
-			<div class="item-nativeplace">籍贯：贵州省铜仁市</div>
+			<div class="item-name"><span class="iconfont">&#xe618;</span>姓名：张欢</div>
+			<div class="item-age"><span class="iconfont">&#xe713;</span>年龄：21</div>
+			<div class="item-phone"><span class="iconfont">&#xe602;</span>联系电话：18285613445</div>
+			<div class="item-school"><span class="iconfont">&#xe601;</span>毕业院校：襄阳职业技术学院</div>
+			<div class="item-email"><span class="iconfont">&#xe67a;</span>邮箱：Zhang1208h@163.com</div>
+			<div class="item-nativeplace"><span class="iconfont">&#xe6a9;</span>籍贯：贵州省铜仁市</div>
 		</div>
 	</div>
 </template>
@@ -33,20 +33,6 @@
 		font-size: 20px;
 		text-align: center;
 	}
-/* 	.item-title:after{
-		content: '';
-		border: 1px solid #fff;
-		display: inline-block;
-		width: 45%;
-		margin-right: 10px;
-	}
-	.item-title:before{
-		content: '';
-		border: 1px solid #fff;
-		display: inline-block;
-		width: 45%;
-		margin-left: 10px;
-	} */
 	.item-title-list{
 		width: 100%;
 		height: 100%;
@@ -54,26 +40,19 @@
 		justify-content: space-between;
 		align-items: center;
 		flex-wrap: wrap;
+		background: #1577b9;
 	}
 	.item-title-list div{
-		width: 30%;
+		width: 49%;
 		line-height: 30px;
 		text-align: center;
 		border-radius: 5px;
-		border: 1px solid red;
 		margin: 15px 5px;
 		color: #fff;
 	}
-	.item-phone,
-	.item-email,
-	.item-name{
-		background: #0000FE;
-		
+	.item-title-list div span{
+		margin-right: 3px;
 	}
-	.item-nativeplace,
-	.item-school,
-	.item-age{
-		background: red;
-	}
+	
 	
 </style>

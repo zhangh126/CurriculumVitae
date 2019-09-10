@@ -1,14 +1,21 @@
 <template>
 	<div class="echarts">
-		<div id="myChart" :style="{width: '400px', height: '400px'}"></div>
+		<div id="myChart" :style="{width: '380px', height: '400px'}"></div>
 	</div>
 </template>
 
 <script>
+	import { gethomedata } from '../../httpapi/index.js'
 	export default {
 	  name: 'Echarts',
 	  mounted(){
 	    this.drawLine();
+	  },
+	  data() {
+		  return{
+			  getecharts:[],
+			  datas:['HTML','CSS','HTML5','CSS3','JavaScript','Vue']
+		  }
 	  },
 	  methods: {
 	    drawLine(){
@@ -28,7 +35,7 @@
 	                legend: {
 	                    orient: 'vertical',
 	                    left: 'left',
-	                    data: ['HTML','CSS','HTML5','CSS3','javaScript','Vue']
+	                    data: this.datas
 	                },
 	                series : [
 	                    {
@@ -37,13 +44,13 @@
 	                        radius : '55%',
 	                        center: ['50%', '60%'],
 	                        data:[
-	                            {value:300, name:'HTML'},
-	                            {value:300, name:'CSS'},
-	                            {value:140, name:'HTML5'},
-	                            {value:160, name:'CSS3'},
-	                            {value:250, name:'javaScript'},
-								{value:300,name:'Vue'}
-	                        ],
+								{value:500,name:'HTML'},
+								{value:600,name:'CSS'},
+								{value:400,name:'HTML5'},
+								{value:500,name:'CSS3'},
+								{value:700,name:'JavaScript'},
+								{value:800,name:'Vue'}
+							],
 	                        itemStyle: {
 	                            emphasis: {
 	                                shadowBlur: 10,

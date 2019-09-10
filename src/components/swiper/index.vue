@@ -38,19 +38,23 @@
 		  pagination: {
 		    type: Boolean,
 		    default: true
-		  },
-		  List: {
-		    type: Array,
-		    default() {
-		      return [];
-		    }
 		  }
-		},
-		created() {
-			console.log(this.List)
 		},
 		data () {
 			return {
+				List:[{
+					    "id": "0001",
+					    "imgUrl": require('assets/img/1.jpg')
+					  },{
+					    "id": "0002",
+					    "imgUrl": require('assets/img/2.jpg')
+					  },{
+					    "id": "0003",
+					    "imgUrl": require('assets/img/3.jpg')
+					  },{
+					    "id": "0004",
+					    "imgUrl": require('assets/img/4.jpg')
+					  }],
 				swiperOption:{
 					// 如果数据只有一条失去滑动效果
 					watchOverflow: true,
@@ -68,7 +72,7 @@
 					loop:this.loop,
 					// 原点
 					pagination: {
-					  el: this.pagination ? '.swiper-pagination' : null
+					  el: '.swiper-pagination'
 					}
 				}
 			}

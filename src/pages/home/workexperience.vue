@@ -10,13 +10,9 @@
 		</div>
 		<div class="skill-right">
 			<div class="skill-right-item">
-						<div class="item-right-text">
-							<span>1.</span>
-							<span>2017年下半年在广东南方数码科技股份有限公司长沙分公司长沙不动产项目驻场实施实习，主要负责公司部门日常工作，整理需求文档。负责系统后期的维护，为客户在系统上提供技术支持。实时了解客户的需求撰写新功能需求文档提供给产品经理</span>
-						</div>
-						<div class="item-right-text">
-							<span>2.</span>
-							<span>2018.3-2019.8就职于中山模思软件岗位是前端开发主要负责公司产品的移动端开发。采用的是vue框架、钉钉微应用UI组件库对公司产品进行组件化、模块化开发。负责公司网站后续迭代维护，二次开发 </span>
+						<div class="item-right-text" v-for="(item,index) of workex" :key="index">
+							<span>{{item.id}}</span>
+							<span>{{item.title}}</span>
 						</div>
 			</div>
 		</div>
@@ -26,6 +22,12 @@
 <script>
 	export default {
 		name:'Skill',
+		props:{
+			workex:{
+				type:Array,
+				default:[]
+			}
+		}
 	}
 </script>
 
@@ -37,7 +39,7 @@
 		justify-content: space-between;
 		flex-wrap: wrap;
 		align-items: center;
-		background: #E5E5E5;
+		margin:10px 0;
 	}
 	.skill-left{
 		width: 30%;
